@@ -82,17 +82,17 @@
 	}
 	table tr td {
 		&.day:hover {
-			background: @grayLighter;
+			background: @gray-lighter;
 			cursor: pointer;
 		}
 		&.old,
 		&.new {
-			color: @grayLight;
+			color: @gray-light;
 		}
 		&.disabled,
 		&.disabled:hover {
 			background: none;
-			color: @grayLight;
+			color: @gray-light;
 			cursor: default;
 		}
 		&.today,
@@ -100,29 +100,29 @@
 		&.today.disabled,
 		&.today.disabled:hover {
 			@todayBackground: lighten(@brand-warning, 30%);
-			.btn-pseudo-states(@todayBackground, spin(@todayBackground, 20));
+			.button-variant(@todayBackground, spin(@todayBackground, 20), @btn-default-border);
 			color: #000 !important;
 		}
 		&.range,
 		&.range:hover,
 		&.range.disabled,
 		&.range.disabled:hover {
-			background:@grayLighter;
+			background:@gray-lighter;
 			.border-radius(0);
 		}
 		&.range.today,
 		&.range.today:hover,
 		&.range.today.disabled,
 		&.range.today.disabled:hover {
-			@todayBackground: mix(@brand-warning, @grayLighter);
-			.btn-pseudo-states(@todayBackground, spin(@todayBackground, 20));
+			@todayBackground: mix(@brand-warning, @gray-lighter);
+			.button-variant(@todayBackground, spin(@todayBackground, 20), @btn-default-border);
 			.border-radius(0);
 		}
 		&.selected,
 		&.selected:hover,
 		&.selected.disabled,
 		&.selected.disabled:hover {
-			.btn-pseudo-states(lighten(@grayLight, 10), darken(@grayLight, 10));
+			.button-variant(lighten(@gray-light, 10), darken(@gray-light, 10), @btn-default-border);
 			color: #fff;
 			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 		}
@@ -130,7 +130,7 @@
 		&.active:hover,
 		&.active.disabled,
 		&.active.disabled:hover {
-			.btn-pseudo-states(@btn-primary-bg, spin(@btn-primary-border, 20));
+			.button-variant(@btn-primary-bg, spin(@btn-primary-border, 20), @btn-default-border);
 			color: #fff;
 			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 		}
@@ -144,24 +144,24 @@
 			cursor: pointer;
 			.border-radius(4px);
 			&:hover {
-				background: @grayLighter;
+				background: @gray-lighter;
 			}
 			&.disabled,
 			&.disabled:hover {
 				background:none;
-				color: @grayLight;
+				color: @gray-light;
 				cursor: default;
 			}
 			&.active,
 			&.active:hover,
 			&.active.disabled,
 			&.active.disabled:hover {
-				.btn-pseudo-states(@btn-primary-bg, spin(@btn-primary-border, 20));
+				.button-variant(@btn-primary-bg, spin(@btn-primary-border, 20), @btn-default-border);
 				color: #fff;
 				text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
 			&.old {
-				color: @grayLight;
+				color: @gray-light;
 			}
 		}
 	}
@@ -174,7 +174,7 @@
 	tfoot tr:first-child th {
 		cursor: pointer;
 		&:hover{
-			background: @grayLighter;
+			background: @gray-lighter;
 		}
 	}
 	/*.dow {
@@ -224,7 +224,7 @@
 		text-align: center;
 		text-shadow: 0 1px 0 #FFF;
 		vertical-align: middle;
-		background-color: @grayLighter;
+		background-color: @gray-lighter;
 		border: 1px solid #ccc;
 		margin-left:-5px;
 		margin-right:-5px;
